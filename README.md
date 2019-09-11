@@ -23,7 +23,7 @@ Rollin' Eats is an app that matches users with a food truck in their area, using
 ![Homepage](https://github.com/jvela924/rollin_eats/blob/master/images/Rollin%20Eats%20Food%20Truck%20Page.png)
 
 ### Profile
-![Profile](https://github.com/jvela924/rollin_eats/blob/master/app/assets/images/Rollin%20Eats%20Profile%20Page.png)
+![Profile](https://github.com/jvela924/rollin_eats/blob/master/images/Rollin%20Eats%20Homepage.png)
 
 ### Food Truck Pages
 ![Food Truck Pages](https://github.com/jvela924/rollin_eats/blob/master/app/assets/images/Rollin%20Eats%20Food%20Truck%20Page.png)
