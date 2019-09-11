@@ -5,7 +5,7 @@ const promise = require('bluebird');
 const app = express ();
 
 // Middleware //
-app.use(express.static('public'));
+app.use(express.static('app/public'));
 app.use(morgan('tiny'));
 
 const foodTrucksController = require('./controllers/foodTruckController.js');
@@ -13,6 +13,10 @@ app.use('/foodtrucks', foodTrucksController)
 
 // Port //
 const PORT = process.env.PORT || 3000;
+
+app.get('/' , (req, res) => {
+  res.render('index.html')
+});
 
 // app.use(session({
 //     secret: "chickenwafflesurprise", //some random string
