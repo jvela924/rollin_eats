@@ -11,11 +11,10 @@ Rollin' Eats is an app that matches users with a food truck in their area, using
 7. I, as a user, can view my previously matched with food trucks.
 
 ## MVP
-* Backend built with Rails.
-* Uses Postgres as the database.
-* Front-end built using React Native.
-* Uses an additional Rails gem.
-* Hosted on Digital Ocean
+* Backend built in Node and Express, using PostgreSQL as the database.
+* Front-end built using React.
+* Hosted on Digital Ocean.
+* Potentially, use axios instead of fetch.
 
 ## Wireframes
 
