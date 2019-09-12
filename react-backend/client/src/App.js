@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header.js'
 import './App.css';
 
 class App extends React.Component {
@@ -22,13 +23,8 @@ class App extends React.Component {
   }
   render () {
     return (
-      <div>
-        <h1>Food Trucks</h1>
-        <ul>
-          {this.state.foodtrucks.map(foodtruck =>
-            <li key={foodtruck.id}>{foodtruck.name}</li>
-      )}
-        </ul>
+      <div className="App">
+        <Header />
       </div>
     )
   }

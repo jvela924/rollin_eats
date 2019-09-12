@@ -8,15 +8,24 @@
   pointer-events: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 400px;
+  background-image: url(https://img-aws.ehowcdn.com/700x/cdn.onlyinyourstate.com/wp-content/uploads/2019/06/33432955_976962192481478_4550796945676828672_o-700x467.jpg);
+  background-repeat: no-repeat;
+  opacity: .45;
+  width: 200%;
+  background-size: 50% 300px;
+}
+
+.header-image {
+  width: 100%;
+  opacity: .55;
 }
 
 .App-link {
