@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './App.css';
 
 class Main extends React.Component {
   constructor (props) {
@@ -9,6 +9,7 @@ class Main extends React.Component {
       foodtrucks: [],
       pics: [],
       randTruck: '',
+      randPic: '',
       image: ''
     }
   }
@@ -21,11 +22,12 @@ class Main extends React.Component {
       const randTruck = Math.floor(Math.random() * this.state.foodtrucks.length);
       this.setState({ randTruck: randTruck})
       console.log(this.state.randTruck);
-      const randPic = ("pic" + Math.ceil(Math.random() * 6)).toString()
-      console.log(randPic);
-      const image = this.state.foodtrucks[randTruck].pic1
-      console.log(image);
+      const randPic = "pic" + Math.ceil(Math.random() * 6)
+      console.log(randPic)
+      this.setState({ randPic: randPic })
+      const image = this.state.foodtrucks[randTruck].pic4
       this.setState({ image: image})
+      console.log(this.state.image);
     })
     .catch(err => console.log(err))
   }
@@ -34,7 +36,6 @@ class Main extends React.Component {
     .then(data => data.json())
     .then(jData => {
       this.setState({ foodtruck: jData.data[1] })
-      console.log(this.state.foodtruck);
     })
     .catch(err => console.log(err))
   }
