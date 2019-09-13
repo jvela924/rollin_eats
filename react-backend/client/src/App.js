@@ -20,18 +20,6 @@ class App extends React.Component {
           }
       })
   }
-  fetchFoodTrucks = () => {
-    fetch('http://localhost:3001/')
-    .then(data => data.json())
-    .then(jData => {
-      console.log(jData);
-      this.setState({ foodtrucks: jData.data })
-    })
-    .catch(err => console.log(err))
-  }
-  componentDidMount() {
-    this.fetchFoodTrucks()
-  }
   render () {
     return (
       <div className="App">
