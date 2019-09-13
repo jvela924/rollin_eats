@@ -21,9 +21,9 @@ class Main extends React.Component {
       const randTruck = Math.floor(Math.random() * this.state.foodtrucks.length);
       this.setState({ randTruck: randTruck})
       console.log(this.state.randTruck);
-      const randPic = "pic" + Math.ceil(Math.random() * 6);
+      const randPic = ("pic" + Math.ceil(Math.random() * 6)).toString()
       console.log(randPic);
-      const image = this.state.foodtrucks[randTruck].pic3
+      const image = this.state.foodtrucks[randTruck].pic1
       console.log(image);
       this.setState({ image: image})
     })
@@ -35,9 +35,6 @@ class Main extends React.Component {
     .then(jData => {
       this.setState({ foodtruck: jData.data[1] })
       console.log(this.state.foodtruck);
-      let image = this.state.foodtruck.randPic
-      this.setState({ image: image })
-      console.log(this.state.image);
     })
     .catch(err => console.log(err))
   }
