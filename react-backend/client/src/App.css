@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Sigmar+One&display=swap');
+
 .App {
   text-align: center;
 }
@@ -11,25 +13,56 @@
 .header {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
   height: 400px;
   background-image: url(https://img-aws.ehowcdn.com/700x/cdn.onlyinyourstate.com/wp-content/uploads/2019/06/33432955_976962192481478_4550796945676828672_o-700x467.jpg);
   background-repeat: no-repeat;
-  opacity: .60;
-  width: 200%;
-  background-size: 50% 300px;
+  opacity: .80;
+  width: 100%;
+  background-size: 100% 300px;
 }
 
 .header-image {
   width: 100%;
-  opacity: .55;
+  opacity: .9;
+}
+
+.title {
+  font-size: 36px;
+  font-family: 'Sigmar One', cursive;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+nav {
+  background-color: black;
+  font-size: 20px;
+}
+
+.header-title {
+  float: left;
+  margin-left: 30px;
+  margin-top: -25px;
+  margin-bottom: -25px;
+}
+
+.buttons {
+  float: right;
+  margin-right: 10px;
+}
+
+.header-button {
+  margin-right: 40px;
+  font-family: "Helvetica Neue", Helvetica;
+  margin-top: 22px;
+  font-size: 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-weight: bold;
 }
 
 @keyframes App-logo-spin {
