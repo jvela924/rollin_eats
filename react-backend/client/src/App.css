@@ -76,17 +76,60 @@ body {
 
 .main-image {
   border-radius: 5px;
+  height: 10%;
+  width: 100%;
 }
 
 .main-div {
   background-color: whitesmoke;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
   border: 2px solid black;
   padding: 20px;
   border-radius: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   margin-bottom: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
+}
+
+.food-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.like-dislike {
+  height: 10%;
+  width: 10%;
+  background-color: whitesmoke;
+  margin-right: 50px;
+  margin-left: 50px;
+  margin-top: 15%;
+}
+
+@media (max-width:1133px) {
+  .like-dislike {
+    height: 10%;
+    width: 10%;
+    background-color: whitesmoke;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 15%;
+  }
+
+  .main-image {
+    border-radius: 5px;
+    height: 10%;
+    width: 90%;
+  }
+
+  .main-h1 {
+    font-size: 22px;
+    font-family: "Helvetica Neue", Helvetica;
+  }
 }
 
 @keyframes App-logo-spin {
