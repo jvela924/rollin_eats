@@ -22,10 +22,12 @@ class Main extends React.Component {
       const randTruck = Math.floor(Math.random() * this.state.foodtrucks.length);
       this.setState({ randTruck: randTruck})
       console.log(this.state.randTruck);
-      const randPic = "pic" + Math.ceil(Math.random() * 6)
-      console.log(randPic)
+      let randNum = Math.ceil(Math.random() * 6)
+      randNum = randNum.toString()
+      const randPic = "pic" + randNum
       this.setState({ randPic: randPic })
-      const image = this.state.foodtrucks[randTruck].pic4
+      console.log(this.state.foodtrucks[randTruck]);
+      const image = this.state.foodtrucks[randTruck].randPic
       this.setState({ image: image})
       console.log(this.state.image);
     })
