@@ -15,7 +15,7 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  height: 400px;
+  height: 350px;
   background-image: url(https://img-aws.ehowcdn.com/700x/cdn.onlyinyourstate.com/wp-content/uploads/2019/06/33432955_976962192481478_4550796945676828672_o-700x467.jpg);
   background-repeat: no-repeat;
   opacity: .80;
@@ -66,7 +66,27 @@ nav {
 }
 
 body {
-  background-color: gray;
+  background-color: #E8E8E8;
+}
+
+.main-h1 {
+  font-size: 30px;
+  font-family: "Helvetica Neue", Helvetica;
+}
+
+.main-image {
+  border-radius: 5px;
+}
+
+.main-div {
+  background-color: whitesmoke;
+  margin-left: 20%;
+  margin-right: 20%;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 @keyframes App-logo-spin {

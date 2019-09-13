@@ -3,7 +3,7 @@ const router = express.Router()
 const db = require('../db/db')
 
 // Get Foodtrucks
-router.get('/', (eq, res, next) => {
+router.get('/', (req, res, next) => {
   console.log('Getting all foodtrucks');
   db.any('select * from foodtrucks')
     .then((data) => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header.js'
+import Main from './Main.js'
 import './App.css';
 
 class App extends React.Component {
@@ -8,8 +9,7 @@ class App extends React.Component {
     this.state = {
       view: {
         page: 'home'
-      },
-      foodtrucks: []
+      }
     }
   }
   handleView = (view) => {
@@ -35,7 +35,12 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        <Header handleView={this.handleView} />
+        <div>
+          <Header handleView={this.handleView} />
+        </div>
+        <div className="main-container">
+          <Main />
+        </div>
       </div>
     )
   }
