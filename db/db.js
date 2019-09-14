@@ -5,7 +5,7 @@ const options = {
 };
 
 const pgp = require('pg-promise')(options);
-const connectionString = process.env.Postgres_URL || 'postgresql://jeremyvela:javraw092492@db:5432/rollin_eats_development'
+const connectionString = process.env.Postgres_URL || 'postgresql://jeremyvela:javraw092492@db-endpoint:5432/rollin_eats_development'
 const db = pgp(connectionString);
 
 module.exports = db
