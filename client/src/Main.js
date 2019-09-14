@@ -14,7 +14,7 @@ class Main extends React.Component {
     }
   }
   fetchFoodtrucks = () => {
-    fetch('http://localhost:3001/foodtrucks')
+    fetch('/foodtrucks')
     .then(data => data.json())
     .then(jData => {
       this.setState({ foodtrucks: jData.data })
@@ -36,7 +36,7 @@ class Main extends React.Component {
     .catch(err => console.log(err))
   }
   fetchFoodtruck = () => {
-    fetch('http://localhost:3001/foodtrucks')
+    fetch('/foodtrucks')
     .then(data => data.json())
     .then(jData => {
       this.setState({ foodtruck: jData.data[1] })
