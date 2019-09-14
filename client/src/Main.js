@@ -10,7 +10,8 @@ class Main extends React.Component {
       pics: [],
       randTruck: '',
       randPic: '',
-      image: ''
+      image: '',
+      view: 'home'
     }
   }
   fetchFoodtrucks = () => {
@@ -28,6 +29,7 @@ class Main extends React.Component {
       console.log(typeof randPic);
 
       this.setState({ randPic: randPic })
+      this.setState({ foodtruck: this.state.foodtrucks[randTruck] })
       console.log(this.state.foodtrucks[randTruck]);
       const image = this.state.foodtrucks[randTruck][randPic]
       this.setState({ image: image})
@@ -35,27 +37,32 @@ class Main extends React.Component {
     })
     .catch(err => console.log(err))
   }
-  fetchFoodtruck = () => {
-    fetch('/foodtrucks')
-    .then(data => data.json())
-    .then(jData => {
-      this.setState({ foodtruck: jData.data[1] })
-    })
-    .catch(err => console.log(err))
-  }
   componentDidMount() {
-    this.fetchFoodtruck()
     this.fetchFoodtrucks()
   }
   render () {
     return (
       <div className="main-div">
-        <h1 className="main-h1">What do you want to eat?</h1>
-        <div className="food-container">
-          <img onClick={this.fetchFoodtrucks} className="like-dislike" src="https://www.nicepng.com/png/detail/170-1703148_red-sign-icon-mark-symbol-cross-marks-orange.png" alt="dislike" />
-          <img className="main-image" src={this.state.image} alt={this.state.foodtruck.name} />
-          <img className="like-dislike" src="https://www.pinclipart.com/picdir/big/200-2004257_heart-icon-red-heart-vector-free-clipart.png" alt="like" />
+        {this.props.view.page === 'home'
+        ?
+        <div>
+          <h1 className="main-h1">What do you want to eat?</h1>
+          <div className="food-container">
+            <img onClick={this.fetchFoodtrucks} className="like-dislike" src="https://www.nicepng.com/png/detail/170-1703148_red-sign-icon-mark-symbol-cross-marks-orange.png" alt="dislike" />
+            <img className="main-image" src={this.state.image} alt={this.state.foodtruck.name} />
+            <img onClick={() => {this.props.handleView('liked')}} className="like-dislike" src="https://www.pinclipart.com/picdir/big/200-2004257_heart-icon-red-heart-vector-free-clipart.png" alt="like" />
+          </div>
+        </div> :
+
+        <div>
+          <h1>{this.state.foodtruck.name}</h1>
+          <div className="social-media">
+            <a target="_blank" href={this.state.foodtruck.instagram}>Instagram</a>
+            <a target="_blank" href={this.state.foodtruck.twitter}>Twitter</a>
+            <a target="_blank" href={this.state.foodtruck.facebook}>Facebook</a>
+          </div>
         </div>
+      }
       </div>
     )
   }

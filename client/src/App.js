@@ -27,7 +27,8 @@ class App extends React.Component {
           <Header handleView={this.handleView} />
         </div>
         <div className="main-container">
-          <Main />
+          <Main view={this.state.view}
+          handleView = {this.handleView} />
         </div>
       </div>
     )
