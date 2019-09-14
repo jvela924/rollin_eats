@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const port = process.env.PORT || 3000;
 
 const foodtrucksRouter = require('./routes/foodtrucks.js');
 const usersRouter = require('./routes/users');
@@ -38,4 +39,4 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+app.listen(port, () => console.log('Listening on port ${port}'));
