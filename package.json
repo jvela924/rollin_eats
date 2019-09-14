@@ -2,8 +2,8 @@
   "name": "react-backend",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
+  "engines": {
+    "node": "10.16.3"
   },
   "dependencies": {
     "bluebird": "^3.5.5",
@@ -15,6 +15,7 @@
     "morgan": "~1.9.1"
   },
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   }
 }
