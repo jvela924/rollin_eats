@@ -4,6 +4,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const port = process.env.PORT || 3000;
+const db = require('./db/db')
 const app = express();
 
 const foodtrucksRouter = require('./routes/foodtrucks.js');
