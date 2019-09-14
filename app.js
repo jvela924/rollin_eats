@@ -27,14 +27,9 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, './client/public')));
-// Handle React routing, return all requests to React app
-  app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, './client/public', 'index.html'));
-  });
-}
+app.get('/', (req, res) => {
+  res.render('client/public/index.html')
+});
 
 // error handler
 app.use(function(err, req, res, next) {
