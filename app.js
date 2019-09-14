@@ -23,7 +23,7 @@ app.use('/foodtrucks', foodtrucksRouter);
 app.use('/pics', usersRouter);
 
 
-app.get('*', (req.res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(_dirname+'/client/build/index.html'))
 })
 
