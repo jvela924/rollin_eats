@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/public')));
 // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/public/index.html')));
+    res.sendFile(path.join(__dirname, 'client/public/index.html'));
   });
 }
 
