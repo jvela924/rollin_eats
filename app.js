@@ -4,7 +4,6 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const port = process.env.PORT || 3000;
-const db = require('./db/db')
 const app = express();
 
 const foodtrucksRouter = require('./routes/foodtrucks.js');
@@ -30,10 +29,10 @@ app.use(function(req, res, next) {
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
-  app.use(express.static(path.join(__dirname, 'client')));
+  app.use(express.static(path.join(__dirname, 'client/build')));
 // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'client/public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'client/build/public', 'index.html'));
   });
 }
 
