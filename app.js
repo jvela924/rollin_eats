@@ -17,7 +17,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'client/public')));
 
 app.use('/foodtrucks', foodtrucksRouter);
 app.use('/pics', usersRouter);
@@ -28,7 +28,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', (req, res) => {
-  res.render('client/public/index.html')
+  res.render('index.html')
 });
 
 // error handler
