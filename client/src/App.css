@@ -171,20 +171,20 @@ body {
   margin-top: 20px;
 }
 
-@media (max-width:1133px) {
+@media (max-width:600px) {
   .like-dislike {
     height: 10%;
     width: 10%;
     background-color: whitesmoke;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right:5px;
+    margin-left: 5px;
     margin-top: 15%;
   }
 
   .main-image {
     border-radius: 5px;
-    max-height: 90%;
-    max-width: 80%;
+    height: 100%;
+    width: 100%;
   }
 
   .main-h1 {
