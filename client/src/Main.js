@@ -93,7 +93,8 @@ class Main extends React.Component {
         </div>
         : ''}
 
-        {this.props.view.page === 'all' ? <div><div>
+        {this.props.view.page === 'all' ? <div>
+       <div>
         {this.state.foodtrucks.map ((foodtruck) => (
             <Foodtruck
               key={foodtruck.id}
