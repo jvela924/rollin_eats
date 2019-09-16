@@ -88,12 +88,15 @@ class Main extends React.Component {
             </div>
           </div>
           <div className="back-home">
-            <button className="header-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
+            <button className="more-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
           </div>
         </div>
         : ''}
 
         {this.props.view.page === 'all' ? <div>
+        <div className="back-home">
+          <button className="more-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
+        </div>
        <div>
         {this.state.foodtrucks.map ((foodtruck) => (
             <Foodtruck
@@ -103,7 +106,7 @@ class Main extends React.Component {
             />
         ))} </div>
         <div className="back-home">
-          <button className="header-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
+          <button className="more-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
         </div></div>
          : ''}
       </div>

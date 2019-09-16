@@ -73,6 +73,16 @@ nav {
   font-weight: bold;
 }
 
+.more-button {
+  font-family: "Helvetica Neue", Helvetica;
+  margin-top: 22px;
+  font-size: 20px;
+  background-color: black;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
 body {
   background-color: #E8E8E8;
 }
@@ -174,6 +184,8 @@ body {
 }
 
 .back-home {
+  display: flex;
+  justify-content: center;
   margin-top: 20px;
 }
 
