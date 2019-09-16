@@ -10,12 +10,6 @@ Rollin' Eats is an app that matches users with a food truck in their area, using
 6. I, as a user, can view information about each food truck and see links to their social media.
 7. I, as a user, can view my previously matched with food trucks.
 
-## MVP
-* Backend built in Node and Express, using PostgreSQL as the database.
-* Front-end built using React.
-* Hosted on Digital Ocean.
-* Potentially, use axios instead of fetch.
-
 ## Wireframes
 
 ### Homepage
