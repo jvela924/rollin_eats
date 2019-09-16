@@ -1,4 +1,5 @@
 import React from 'react'
+import Foodtruck from './Foodtruck.js'
 import './App.css';
 
 class Main extends React.Component {
@@ -92,7 +93,18 @@ class Main extends React.Component {
         </div>
         : ''}
 
-        {this.props.view.page === 'all' ? <h1>Hello</h1> : ''}
+        {this.props.view.page === 'all' ? <div><div>
+        {this.state.foodtrucks.map ((foodtruck) => (
+            <Foodtruck
+              key={foodtruck.id}
+              foodtruck={foodtruck}
+              handleView={this.props.handleView}
+            />
+        ))} </div>
+        <div className="back-home">
+          <button className="header-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
+        </div></div>
+         : ''}
       </div>
     )
   }
