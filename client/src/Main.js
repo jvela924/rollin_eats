@@ -1,5 +1,6 @@
 import React from 'react'
 import Foodtruck from './Foodtruck.js'
+import Form from './Form.js'
 import './App.css';
 
 class Main extends React.Component {
@@ -12,8 +13,35 @@ class Main extends React.Component {
       randTruck: '',
       randPic: '',
       image: '',
-      view: 'home'
+      view: 'home',
+      formInputs: {
+                id: null,
+                username: '',
+                password: '',
+                foodtruck_id: null
+        }
     }
+  }
+  handleCreate = (createData) => {
+    fetch('/users', {
+      body: JSON.stringify(createData),
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(createdUser => {
+      return createdUser.json()
+    })
+    .then(jsonedUser => {
+      this.props.handleView('home')
+      this.setState(prevState => {
+        prevState.users.unshift(jsonedUser)
+        return { users: prevState.users }
+      })
+    })
+    .catch(err => alert("Must fill out all form fields"))
   }
   fetchFoodtrucks = () => {
     fetch('/foodtrucks')

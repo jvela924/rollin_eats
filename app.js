@@ -20,7 +20,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.use('/foodtrucks', foodtrucksRouter);
-app.use('/pics', usersRouter);
+app.use('/users', usersRouter);
 
 
 app.get('*', (req, res) => {
