@@ -1,6 +1,7 @@
 import React from 'react'
 import Foodtruck from './Foodtruck.js'
 import Form from './Form.js'
+import About from './About.js'
 import './App.css';
 
 class Main extends React.Component {
@@ -19,7 +20,27 @@ class Main extends React.Component {
                 username: '',
                 password: '',
                 foodtruck_id: null
-        }
+        },
+    location: [
+      {
+        id: 0,
+        title: 'New York',
+        selected: false,
+        key: 'location'
+      },
+      {
+        id: 0,
+        title: 'Los Angeles',
+        selected: false,
+        key: 'location'
+      },
+      {
+        id: 0,
+        title: 'Atlanta',
+        selected: false,
+        key: 'location'
+      }
+    ]
     }
   }
   handleCreate = (createData) => {
@@ -65,6 +86,13 @@ class Main extends React.Component {
       console.log(this.state.image);
     })
     .catch(err => console.log(err))
+  }
+  toggleSelected(id, key){
+    let temp = this.state[key]
+    temp[id].selected = !temp[id].selected
+    this.setState({
+      [key]: temp
+    })
   }
   componentDidMount() {
     this.fetchFoodtrucks()
@@ -137,6 +165,8 @@ class Main extends React.Component {
           <button className="more-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
         </div></div>
          : ''}
+         {this.props.view.page === 'about' ?
+         <About /> : ''}
       </div>
     )
   }

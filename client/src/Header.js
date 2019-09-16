@@ -12,8 +12,7 @@ class Header extends React.Component {
             <button className="header-button" onClick={() => {this.props.handleView('home')}}>Home</button>
             <button className="header-button" onClick={() =>
             {this.props.handleView('all')}}>Find a Food Truck</button>
-            <button className="header-button" onClick={() =>
-            {this.props.handleView('profile')}}>Profile</button>
+            <button className="header-button" onClick={() => {this.props.handleView('about')}}>About</button>
           </div>
         </nav>
       </div>
