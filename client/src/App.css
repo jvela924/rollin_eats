@@ -17,10 +17,7 @@
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   color: white;
-  height: 350px;
-  background-image: url(https://img-aws.ehowcdn.com/700x/cdn.onlyinyourstate.com/wp-content/uploads/2019/06/33432955_976962192481478_4550796945676828672_o-700x467.jpg);
-  background-repeat: no-repeat;
-  opacity: .80;
+  height: 100px;
   width: 100%;
   background-size: 100% 300px;
 }
@@ -84,20 +81,21 @@ nav {
 }
 
 body {
-  background-color: #E8E8E8;
+  background-image: url(https://i.pinimg.com/originals/cc/e0/c7/cce0c7db236b5e269c7721de801bb8f7.jpg);
 }
 
 .main-h1 {
   font-size: 40px;
   font-family: 'Permanent Marker', cursive;
+  margin-bottom: 50px;
 }
 
 .main-image {
   border-radius: 5px;
   max-height: 100%;
   max-width: 100%;
-  min-width: 60%;
-  min-height: 60%;
+  min-height: 100%;
+  min-width: 100%;
 }
 
 .main-div {
@@ -106,11 +104,14 @@ body {
   margin-right: 10%;
   border: 2px solid black;
   padding: 20px;
+  padding-bottom: 80px;
   border-radius: 10px;
-  padding-bottom: 40px;
   margin-bottom: 40px;
   padding-right: 40px;
   padding-left: 40px;
+  height: 100%;
+  overflow-y: scroll;
+  max-height: 900px;
 }
 
 .food-container {
@@ -203,6 +204,10 @@ body {
     margin-right:5px;
     margin-left: 5px;
     margin-top: 15%;
+  }
+
+  .header {
+    margin-bottom: 70px;
   }
 
   .main-image {
