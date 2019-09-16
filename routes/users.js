@@ -19,7 +19,6 @@ router.get('/', (req, res, next) => {
     })
 });
 
-// Tried to make a post route //
 // router.post('/', (req, res, next) => {
 //   const {username, password} = request.body
 //   db.any('INSERT INTO users (username, password) VALUES ($1, $2)', [username, password])
