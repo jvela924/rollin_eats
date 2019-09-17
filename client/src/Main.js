@@ -1,5 +1,5 @@
 import React from 'react'
-import Foodtruck from './Foodtruck.js'
+import Foodtrucks from './Foodtrucks.js'
 import Form from './Form.js'
 import About from './About.js'
 import './App.css';
@@ -154,7 +154,7 @@ class Main extends React.Component {
           <button className="more-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
         </div>
        <div>
-            <Foodtruck
+            <Foodtrucks
               handleView={this.props.handleView}
               foodtrucks={this.state.foodtrucks}
             />

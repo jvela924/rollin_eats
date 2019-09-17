@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css';
 
-class Foodtruck extends React.Component {
+class Foodtrucks extends React.Component {
   constructor(props){
     super(props)
       this.state={
@@ -59,4 +59,4 @@ class Foodtruck extends React.Component {
 }
 
 
-export default Foodtruck
+export default Foodtrucks
