@@ -296,6 +296,11 @@ body {
     margin-left: 5px;
     margin-top: 15%;
   }
+
+  .food-container {
+    width: 100%;
+    margin-left: -20px;
+  }
 }
 
 
