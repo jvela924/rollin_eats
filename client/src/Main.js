@@ -154,13 +154,11 @@ class Main extends React.Component {
           <button className="more-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
         </div>
        <div>
-        {this.state.foodtrucks.map ((foodtruck) => (
             <Foodtruck
-              key={foodtruck.id}
-              foodtruck={foodtruck}
               handleView={this.props.handleView}
+              foodtrucks={this.state.foodtrucks}
             />
-        ))} </div>
+         </div>
         <div className="back-home">
           <button className="more-button" onClick={() => {this.props.handleView('home')}}>Find More Food</button>
         </div></div>

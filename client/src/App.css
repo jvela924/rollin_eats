@@ -198,6 +198,58 @@ body {
   margin-bottom: 100px;
 }
 
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+}
+
+.fa-github {
+  margin-left: 20px;
+  background-color: black;
+  height: 30px;
+  width: 30px;
+  color: black;
+  border-radius: 50px;
+}
+
+.fa-github:before {
+  margin-left: 20px;
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  color: black;
+}
+
+.fa-linkedin-square {
+  background-color: black;
+}
+
+.fa-linkedin-square:before {
+  color: #0077B5;
+  border-radius: 40px;
+}
+
+.about {
+  margin-bottom: 120px;
+}
+
+.h3-about {
+  margin-top: 100px;
+}
+.h3-search {
+  font-size: 20px;
+}
+
+.search {
+  height: 25px;
+  width: 200px;
+  font-size: 17px;
+}
+
 @media (max-width:900px) {
   .like-dislike {
     height: 10%;
