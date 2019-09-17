@@ -251,7 +251,7 @@ body {
   font-size: 17px;
 }
 
-@media (max-width:900px) {
+@media screen (max-width:900px) {
   .like-dislike {
     height: 10%;
     width: 10%;
@@ -276,6 +276,28 @@ body {
     font-family: "Helvetica Neue", Helvetica;
   }
 }
+
+@media screen and (max-width: 750px) {
+  .main-div {
+    margin-top: 200px;
+    max-height: 500px;
+  }
+
+  .main-image {
+    border-radius: 5px;
+    height: 300px;
+    width: 200%;
+  }
+  .like-dislike {
+    height: 8%;
+    width: 8%;
+    background-color: whitesmoke;
+    margin-right:5px;
+    margin-left: 5px;
+    margin-top: 15%;
+  }
+}
+
 
 @keyframes App-logo-spin {
   from {
