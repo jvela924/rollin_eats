@@ -14,7 +14,7 @@ class Foodtrucks extends React.Component {
   render () {
     let filteredFoodtrucks = this.props.foodtrucks.filter(
       (foodtruck) => {
-        return foodtruck.name.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+        return foodtruck.description.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
       }
     )
     return (
