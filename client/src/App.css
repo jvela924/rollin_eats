@@ -253,7 +253,7 @@ body {
 
 .portfolio {
   color: white;
-  margin-left: 20px;
+  font-size: 1em;
 }
 
 @media screen (max-width:900px) {
