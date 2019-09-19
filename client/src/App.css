@@ -251,6 +251,11 @@ body {
   font-size: 17px;
 }
 
+.portfolio {
+  color: white;
+  margin-left: 20px;
+}
+
 @media screen (max-width:900px) {
   .like-dislike {
     height: 10%;
