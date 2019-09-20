@@ -1,6 +1,9 @@
 # Rollin' Eats
 Rollin' Eats is an app that matches users with a food truck in their area, using either tags of food images that users like or dislike.
 
+## Live site
+[Rollin' Eats](https://rollin-eats.herokuapp.com)
+
 ## Technologies Used
 ### React
 I React to build-out our Front-end. React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications, as it is optimal for fetching rapidly changing data that needs to be recorded.
@@ -41,3 +44,5 @@ I struggled initially deploying to Heroku, since I didn't realize I needed to ad
 * Add authorization/authentication workflow and post route to create users
 * Add in more food trucks and other cities. Allow users to filter by city or use their location on page load to automatically filter food trucks. 
 * Add ability for users to create and save a list of their liked food trucks.
+
+
