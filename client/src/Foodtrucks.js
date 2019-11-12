@@ -58,5 +58,4 @@ class Foodtrucks extends React.Component {
   }
 }
 
-
 export default Foodtrucks

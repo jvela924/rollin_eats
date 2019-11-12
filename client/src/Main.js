@@ -1,6 +1,6 @@
 import React from 'react'
 import Foodtrucks from './Foodtrucks.js'
-import Form from './Form.js'
+// import Form from './Form.js'
 import About from './About.js'
 import './App.css';
 
@@ -10,17 +10,10 @@ class Main extends React.Component {
     this.state = {
       foodtruck: '',
       foodtrucks: [],
-      pics: [],
       randTruck: '',
       randPic: '',
       image: '',
       view: 'home',
-      formInputs: {
-                id: null,
-                username: '',
-                password: '',
-                foodtruck_id: null
-        },
     location: [
       {
         id: 0,
@@ -28,72 +21,70 @@ class Main extends React.Component {
         selected: false,
         key: 'location'
       },
-      {
-        id: 0,
-        title: 'Los Angeles',
-        selected: false,
-        key: 'location'
-      },
-      {
-        id: 0,
-        title: 'Atlanta',
-        selected: false,
-        key: 'location'
-      }
+      // {
+      //   id: 0,
+      //   title: 'Los Angeles',
+      //   selected: false,
+      //   key: 'location'
+      // },
+      // {
+      //   id: 0,
+      //   title: 'Atlanta',
+      //   selected: false,
+      //   key: 'location'
+      // }
     ]
     }
   }
-  handleCreate = (createData) => {
-    fetch('/users', {
-      body: JSON.stringify(createData),
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(createdUser => {
-      return createdUser.json()
-    })
-    .then(jsonedUser => {
-      this.props.handleView('home')
-      this.setState(prevState => {
-        prevState.users.unshift(jsonedUser)
-        return { users: prevState.users }
-      })
-    })
-    .catch(err => alert("Must fill out all form fields"))
-  }
+  // handleCreate = (createData) => {
+  //   fetch('/users', {
+  //     body: JSON.stringify(createData),
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json, text/plain, */*',
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  //   .then(createdUser => {
+  //     return createdUser.json()
+  //   })
+  //   .then(jsonedUser => {
+  //     this.props.handleView('home')
+  //     this.setState(prevState => {
+  //       prevState.users.unshift(jsonedUser)
+  //       return { users: prevState.users }
+  //     })
+  //   })
+  //   .catch(err => alert("Must fill out all form fields"))
+  // }
   fetchFoodtrucks = () => {
     fetch('/foodtrucks')
     .then(data => data.json())
     .then(jData => {
       this.setState({ foodtrucks: jData.data })
-      console.log(this.state.foodtrucks);
+      // console.log(this.state.foodtrucks);
       const randTruck = Math.floor(Math.random() * this.state.foodtrucks.length);
       this.setState({ randTruck: randTruck})
-      console.log(this.state.randTruck);
-      let randNum = Math.ceil(Math.random() * 6)
-      randNum = randNum.toString()
+      // console.log(this.state.randTruck);
+      let randNum = Math.ceil(Math.random() * 6).toString()
       const randPic = 'pic' + randNum
-      console.log(typeof randPic);
-
+      // console.log(typeof randPic);
       this.setState({ randPic: randPic })
       this.setState({ foodtruck: this.state.foodtrucks[randTruck] })
-      console.log(this.state.foodtrucks[randTruck]);
+      // console.log(this.state.foodtrucks[randTruck]);
       const image = this.state.foodtrucks[randTruck][randPic]
       this.setState({ image: image})
-      console.log(this.state.image);
+      // console.log(this.state.image);
     })
     .catch(err => console.log(err))
   }
-  toggleSelected(id, key){
-    let temp = this.state[key]
-    temp[id].selected = !temp[id].selected
-    this.setState({
-      [key]: temp
-    })
-  }
+  // toggleSelected(id, key){
+  //   let temp = this.state[key]
+  //   temp[id].selected = !temp[id].selected
+  //   this.setState({
+  //     [key]: temp
+  //   })
+  // }
   componentDidMount() {
     this.fetchFoodtrucks()
   }

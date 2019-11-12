@@ -24,7 +24,7 @@ app.use('/pics', usersRouter);
 
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(_dirname+'/client/build/index.html'))
+  res.sendFile(path.join(__dirname+'/client/public/index.html'))
 })
 
 
