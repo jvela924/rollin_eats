@@ -110,9 +110,9 @@ class Main extends React.Component {
           <h3>{this.state.foodtruck.description}</h3>
           <h3>City: {this.state.foodtruck.city}</h3>
           <div className="social-media">
-            <a class="fa fa-instagram" target="_blank" rel="noopener noreferrer" href={this.state.foodtruck.instagram}></a>
-            <a class="fa fa-twitter" rel="noopener noreferrer" target="_blank" href={this.state.foodtruck.twitter}></a>
-            <a class="fa fa-facebook" rel="noopener noreferrer" target="_blank" href={this.state.foodtruck.facebook}></a>
+            <a className="fa fa-instagram" target="_blank" rel="noopener noreferrer" href={this.state.foodtruck.instagram}></a>
+            <a className="fa fa-twitter" rel="noopener noreferrer" target="_blank" href={this.state.foodtruck.twitter}></a>
+            <a className="fa fa-facebook" rel="noopener noreferrer" target="_blank" href={this.state.foodtruck.facebook}></a>
           </div>
           <div className="social-media">
             <div className="truck-pics">
