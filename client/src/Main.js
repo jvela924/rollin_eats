@@ -20,19 +20,7 @@ class Main extends React.Component {
         title: 'New York',
         selected: false,
         key: 'location'
-      },
-      // {
-      //   id: 0,
-      //   title: 'Los Angeles',
-      //   selected: false,
-      //   key: 'location'
-      // },
-      // {
-      //   id: 0,
-      //   title: 'Atlanta',
-      //   selected: false,
-      //   key: 'location'
-      // }
+      }
     ]
     }
   }
